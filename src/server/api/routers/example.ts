@@ -1,10 +1,9 @@
-import { wrap } from "@decs/typeschema";
-import { string } from "valibot";
+import { z } from "zod";
 import { createTRPCRouter, publicProcedure } from "../utils";
 
 export const exampleRouter = createTRPCRouter({
   hello: publicProcedure
-    .input(wrap(string()))
+    .input(z.string())
     .query(({ input }) => {
       return `Hello ${input}!`;
     })
