@@ -1,4 +1,4 @@
 [build]
 command = "vinxi start"
-functions = "netlify/functions"
-publish = "netlify"
+# functions = "netlify/functions"
+publish = "dist"
